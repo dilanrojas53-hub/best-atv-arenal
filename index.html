@@ -16,9 +16,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&display=swap" rel="stylesheet" />
-  <link rel="preload" as="image" href="assets/img/hd/01-atv-volcano-mirador.jpg" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="preload" as="image" href="assets/img/hd/01-atv-volcano-mirador.jpg?v=9" />
   <link rel="icon" type="image/png" href="assets/img/logo.png" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=9" />
 
   <script type="application/ld+json">
   {
@@ -102,9 +105,9 @@
     <!-- ================= HERO SLIDESHOW ================= -->
     <section class="hero" id="top" aria-roledescription="carousel" aria-label="Featured adventures">
       <div class="hero__slides" data-parallax>
-        <figure class="slide is-active" style="--img:url('assets/img/hd/01-atv-volcano-mirador.jpg')"></figure>
-        <figure class="slide" style="--img:url('assets/img/jetski.jpg')"></figure>
-        <figure class="slide" style="--img:url('assets/img/sidebyside.jpg')"></figure>
+        <figure class="slide is-active" style="--img:url('assets/img/hd/01-atv-volcano-mirador.jpg?v=9')"></figure>
+        <figure class="slide" style="--img:url('assets/img/hd/05-jetski-arenal-volcano.jpg?v=9')"></figure>
+        <figure class="slide" style="--img:url('assets/img/hd/02-atv-outback-volcano.jpg?v=9')"></figure>
       </div>
       <div class="hero__shade"></div>
 
@@ -117,6 +120,10 @@
         </h1>
         <div class="hero__actions">
           <a href="#tours" class="pill pill--light" data-i18n="hero.cta">See all tours</a>
+          <button type="button" class="pill pill--video" data-reel="0">
+            <span class="pill__play" aria-hidden="true">▶</span>
+            <span data-i18n="hero.vid">Watch 4 real videos</span>
+          </button>
           <a href="https://wa.me/50684674777?text=Hi!%20I%20want%20to%20book%20an%20adventure%20in%20Arenal" target="_blank" rel="noopener" class="pill pill--glass">
             <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.9s.7-2.1 1-2.4c.3-.3.6-.3.8-.3h.6c.2 0 .4 0 .6.5l.9 2.1c.1.2.1.4 0 .6l-.4.6-.4.4c-.1.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.7-.1l1-1.2c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.5.3.1.2.1.7-.1 1.3Z"/></svg>
             <span data-i18n="hero.wa">Direct WhatsApp</span>
@@ -161,26 +168,26 @@
           <p class="head__sub" data-i18n="deals.sub">Volcano trails, rainforest rivers and Costa Rica's biggest lake — all within minutes of La Fortuna.</p>
         </header>
         <div class="bento">
-          <a href="#tour-discovery" class="tile tile--tall" data-open="discovery" style="--img:url('assets/img/hd/01-atv-volcano-mirador.jpg')">
+          <a href="#tour-discovery" class="tile tile--tall" data-open="discovery" style="--img:url('assets/img/hd/01-atv-volcano-mirador.jpg?v=9')">
             <span class="tile__badge" data-i18n="deals.pop">Most popular</span>
             <span class="tile__small" data-i18n="deals.from">From</span>
             <span class="tile__price">$99</span>
             <span class="tile__label" data-i18n="deals.t2">Base of the volcano</span>
             <span class="tile__link" data-i18n="deals.view">View tour →</span>
           </a>
-          <a href="#tour-maleku" class="tile" data-open="maleku" style="--img:url('assets/img/maleku.jpg')">
+          <a href="#tour-maleku" class="tile" data-open="maleku" style="--img:url('assets/img/hd/02-atv-outback-volcano.jpg?v=9')">
             <span class="tile__small" data-i18n="deals.from">From</span>
             <span class="tile__price">$85</span>
             <span class="tile__label" data-i18n="deals.t1">Jungle &amp; Maleku ATV</span>
             <span class="tile__link" data-i18n="deals.view">View tour →</span>
           </a>
-          <a href="#tour-jetski" class="tile" data-open="jetski" style="--img:url('assets/img/hd/05-jetski-arenal-volcano.jpg'); --pos: center 62%">
+          <a href="#tour-jetski" class="tile" data-open="jetski" style="--img:url('assets/img/hd/05-jetski-arenal-volcano.jpg?v=9'); --pos: center 62%">
             <span class="tile__small" data-i18n="deals.from">From</span>
             <span class="tile__price">$109</span>
             <span class="tile__label" data-i18n="deals.t3">Jet ski at sunset</span>
             <span class="tile__link" data-i18n="deals.view">View tour →</span>
           </a>
-          <a href="#tour-sbs" class="tile" data-open="sbs" style="--img:url('assets/img/sidebyside.jpg')">
+          <a href="#tour-sbs" class="tile" data-open="sbs" style="--img:url('assets/img/hd/04-jetski-emerald-cove.jpg?v=9')">
             <span class="tile__small" data-i18n="deals.vehicle">Per vehicle · up to 6</span>
             <span class="tile__price">$300</span>
             <span class="tile__label" data-i18n="deals.t4">Side by side family</span>
@@ -429,7 +436,7 @@
 
           <aside class="route__card" id="routeCard" aria-live="polite">
             <div class="route__media">
-              <img id="rcImg" src="assets/img/hero.jpg" alt="" loading="lazy" />
+              <img id="rcImg" src="assets/img/hd/01-atv-volcano-mirador.jpg?v=9" alt="" loading="lazy" />
               <span class="badge" id="rcBadge">01 / 05</span>
             </div>
             <div class="route__body">
@@ -451,7 +458,7 @@
       <div class="wrap experience__grid">
         <figure class="experience__photo">
           <button type="button" class="photo-zoom" data-lightbox="assets/img/hd/02-atv-outback-volcano.jpg" aria-label="View full photo">
-            <img src="assets/img/hd/02-atv-outback-volcano.jpg" alt="Rider on an Outback ATV facing Arenal Volcano" loading="lazy" width="896" height="1200" />
+            <img src="assets/img/hd/02-atv-outback-volcano.jpg?v=9" alt="Rider on an Outback ATV facing Arenal Volcano" loading="lazy" width="896" height="1200" />
           </button>
           <div class="badge-float">
             <strong>Travelers' Choice</strong>
@@ -471,17 +478,21 @@
           </dl>
         </div>
       </div>
-      <div class="wrap mosaic" aria-label="Trail photo gallery">
+      <div class="wrap mosaic mosaic--four" aria-label="Trail photo gallery">
         <button type="button" class="mosaic__item" data-lightbox="assets/img/hd/04-jetski-emerald-cove.jpg">
-          <img src="assets/img/hd/04-jetski-emerald-cove.jpg" alt="Couple on an Outback jet ski in an emerald jungle cove" loading="lazy" />
+          <img src="assets/img/hd/04-jetski-emerald-cove.jpg?v=9" alt="Couple on an Outback jet ski in an emerald jungle cove" loading="lazy" />
           <span class="mosaic__zoom" aria-hidden="true">⤢</span>
         </button>
         <button type="button" class="mosaic__item mosaic__item--tall" data-lightbox="assets/img/hd/05-jetski-arenal-volcano.jpg">
-          <img src="assets/img/hd/05-jetski-arenal-volcano.jpg" alt="Jet ski on Lake Arenal with Arenal Volcano behind" loading="lazy" />
+          <img src="assets/img/hd/05-jetski-arenal-volcano.jpg?v=9" alt="Jet ski on Lake Arenal with Arenal Volcano behind" loading="lazy" />
           <span class="mosaic__zoom" aria-hidden="true">⤢</span>
         </button>
         <button type="button" class="mosaic__item" data-lightbox="assets/img/hd/01-atv-volcano-mirador.jpg">
-          <img src="assets/img/hd/01-atv-volcano-mirador.jpg" alt="Two riders on an Outback ATV overlooking Arenal Volcano" loading="lazy" />
+          <img src="assets/img/hd/01-atv-volcano-mirador.jpg?v=9" alt="Two riders on an Outback ATV overlooking Arenal Volcano" loading="lazy" />
+          <span class="mosaic__zoom" aria-hidden="true">⤢</span>
+        </button>
+        <button type="button" class="mosaic__item mosaic__item--tall" data-lightbox="assets/img/hd/03-jetski-action-lake.jpg">
+          <img src="assets/img/hd/03-jetski-action-lake.jpg?v=9" alt="Couple riding an Outback jet ski across Lake Arenal" loading="lazy" />
           <span class="mosaic__zoom" aria-hidden="true">⤢</span>
         </button>
       </div>
@@ -526,7 +537,7 @@
               <label class="fld"><span data-i18n="book.name">Name</span><input type="text" id="bName" autocomplete="name" placeholder="Alex" /></label>
             </div>
             <div class="ticket__summary" id="ticketSummary" aria-live="polite">
-              <img id="tsImg" src="assets/img/discovery.jpg" alt="" width="48" height="48" />
+              <img id="tsImg" src="assets/img/hd/01-atv-volcano-mirador.jpg?v=9" alt="" width="48" height="48" />
               <div class="ticket__summary-txt">
                 <strong id="tsName">The Discovery Adventure</strong>
                 <small id="tsBreakdown">2 × $99 per person</small>
@@ -642,7 +653,7 @@
       <img id="lbImg" alt="" />
       <figcaption class="lightbox__meta">
         <span id="lbCap"></span>
-        <strong id="lbCount">1 / 4</strong>
+        <strong id="lbCount">1 / 5</strong>
       </figcaption>
     </figure>
     <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Next photo">›</button>
@@ -659,6 +670,6 @@
     <button class="lightbox__nav lightbox__nav--next" id="vmNext" aria-label="Next video">›</button>
   </div>
 
-  <script src="app.js" defer></script>
+  <script src="app.js?v=9" defer></script>
 </body>
 </html>

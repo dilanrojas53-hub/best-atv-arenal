@@ -13,7 +13,7 @@
   /* ---------- Tours: single source of truth ---------- */
   const TOURS = [
     {
-      id: "discovery", price: 99, unit: "person", cats: ["land"], img: "assets/img/hd/01-atv-volcano-mirador.jpg",
+      id: "discovery", price: 99, unit: "person", cats: ["land"], img: "assets/img/hd/01-atv-volcano-mirador.jpg?v=9", video: "assets/video/clip-1.mp4", reelIdx: 0,
       en: { name: "The Discovery Adventure", tag: "Signature", meta: "ATV · Base of Arenal Volcano", chip: "Only route to the volcano base",
         desc: "Our signature ride and the only ATV route that reaches the base of Arenal Volcano. Wide-open viewpoints, jungle tracks and plenty of mud.",
         high: ["Panoramic viewpoints at the foot of the volcano", "Jungle and pasture trails", "Photo stops with the volcano behind you"] },
@@ -22,7 +22,7 @@
         high: ["Miradores panorámicos al pie del volcán", "Senderos de selva y potreros", "Paradas para fotos con el volcán de fondo"] }
     },
     {
-      id: "jetski", price: 109, unit: "person", cats: ["water"], img: "assets/img/hd/03-jetski-action-lake.jpg",
+      id: "jetski", price: 109, unit: "person", cats: ["water"], img: "assets/img/hd/03-jetski-action-lake.jpg?v=9", video: "assets/video/clip-3.mp4", reelIdx: 2,
       en: { name: "Arenal Lake Jet Ski", tag: "On the water", meta: "Jet ski · Lake Arenal", chip: "Sunset rides available",
         desc: "Fly across Costa Rica's largest and deepest lake with the volcano on the horizon. Time it right and you'll ride into a sunset you won't forget.",
         high: ["Costa Rica's biggest lake", "Volcano views from the water", "Golden-hour departures"] },
@@ -31,7 +31,7 @@
         high: ["El lago más grande de Costa Rica", "Vistas del volcán desde el agua", "Salidas en la hora dorada"] }
     },
     {
-      id: "maleku", price: 85, unit: "person", cats: ["land"], img: "assets/img/maleku.jpg",
+      id: "maleku", price: 85, unit: "person", cats: ["land"], img: "assets/img/hd/02-atv-outback-volcano.jpg?v=9", video: "assets/video/clip-2.mp4", reelIdx: 1,
       en: { name: "Jungle & Maleku ATV Tour", tag: "Culture", meta: "ATV · Rainforest · Indigenous visit", chip: "Best value",
         desc: "Ride deep rainforest trails and meet the Maleku, one of Costa Rica's indigenous peoples, to learn about their traditions and way of life.",
         high: ["Dense rainforest trails", "Cultural visit with the Maleku community", "Rivers, mud and wildlife spotting"] },
@@ -40,11 +40,11 @@
         high: ["Senderos de bosque lluvioso", "Visita cultural a la comunidad Maleku", "Ríos, barro y avistamiento de fauna"] }
     },
     {
-      id: "sbs", price: 300, unit: "vehicle", cats: ["land", "group"], img: "assets/img/sidebyside.jpg",
+      id: "sbs", price: 300, unit: "vehicle", cats: ["land", "group"], img: "assets/img/hd/04-jetski-emerald-cove.jpg?v=9", video: "assets/video/clip-4.mp4", reelIdx: 3,
       en: { name: "Side by Side Tour", tag: "Families", meta: "3 hours · 1–6 riders per vehicle", chip: "Price per vehicle",
         desc: "Bring the whole crew. A 3-hour off-road adventure through lush rainforest in a side-by-side built for up to six riders — perfect for families.",
         high: ["3 hours of off-road trails", "Up to 6 riders in one vehicle", "Great for kids and mixed groups"] },
-      es: { name: "Tour en Side by Side", tag: "Familias", meta: "3 horas · 1–6 personas por vehículo", chip: "Precio por vehículo",
+      es: { name: "Tour en Side by Side", tag: "Familias", meta: "3 hours · 1–6 personas por vehículo", chip: "Precio por vehículo",
         desc: "Trae a todo el grupo. Una aventura todoterreno de 3 horas por el bosque lluvioso en un side by side para hasta seis personas, ideal para familias.",
         high: ["3 horas de senderos todoterreno", "Hasta 6 personas en un vehículo", "Ideal para niños y grupos mixtos"] }
     }
@@ -57,27 +57,27 @@
   /* ---------- Interactive Expedition Map Checkpoints ---------- */
   const STOPS = [
     {
-      tour: "discovery", img: "assets/img/hero.jpg",
+      tour: "discovery", img: "assets/img/hd/01-atv-volcano-mirador.jpg?v=9",
       en: { kicker: "01 · Base Camp · La Fortuna", title: "Safety Briefing & Practice Track", desc: "Meet your bilingual local guide, get fitted with helmet and safety gear, and test your ATV or Side by Side before entering the rainforest trails." },
       es: { kicker: "01 · Campamento Base · La Fortuna", title: "Charla de Seguridad y Práctica", desc: "Conoce a tu guía local bilingüe, recibe casco y equipo de seguridad, y prueba tu cuadra o Side by Side antes de entrar a la selva." }
     },
     {
-      tour: "sbs", img: "assets/img/mud.jpg",
+      tour: "sbs", img: "assets/img/hd/03-jetski-action-lake.jpg?v=9",
       en: { kicker: "02 · Rainforest & River Crossings", title: "Deep Mud & Jungle Streams", desc: "Splash across shallow rainforest rivers and muddy backcountry tracks surrounded by primary tropical forest and local wildlife." },
       es: { kicker: "02 · Ríos y Senderos de Selva", title: "Barro Profundo y Ríos de Bosque", desc: "Cruza ríos poco profundos y senderos de barro rodeados de bosque tropical primario y fauna local." }
     },
     {
-      tour: "maleku", img: "assets/img/maleku.jpg",
+      tour: "maleku", img: "assets/img/hd/04-jetski-emerald-cove.jpg?v=9",
       en: { kicker: "03 · Cultural Stop · $85 Tour", title: "Maleku Indigenous Territory", desc: "On our Jungle & Maleku ATV route, visit a Maleku community to learn about their ancestral language, art and rainforest traditions." },
       es: { kicker: "03 · Parada Cultural · Tour de $85", title: "Territorio Indígena Maleku", desc: "En la ruta Selva y Maleku visitamos a la comunidad Maleku para conocer de primera mano su lengua ancestral, arte y tradiciones." }
     },
     {
-      tour: "discovery", img: "assets/img/hd/02-atv-outback-volcano.jpg",
+      tour: "discovery", img: "assets/img/hd/02-atv-outback-volcano.jpg?v=9",
       en: { kicker: "04 · Exclusive Viewpoint · $99 / $300", title: "Base of Arenal Volcano", desc: "Reach our private viewpoint at the foot of Arenal Volcano — the only ATV route in La Fortuna that gets you this close to the colossus." },
       es: { kicker: "04 · Mirador Exclusivo · $99 / $300", title: "Base del Volcán Arenal", desc: "Llega a nuestro mirador privado al pie del Volcán Arenal: la única ruta en cuadra de La Fortuna que se acerca tanto al coloso." }
     },
     {
-      tour: "jetski", img: "assets/img/hd/05-jetski-arenal-volcano.jpg",
+      tour: "jetski", img: "assets/img/hd/05-jetski-arenal-volcano.jpg?v=9",
       en: { kicker: "05 · On the Water · $109 Tour", title: "Lake Arenal Sunset Bay", desc: "Launch onto Costa Rica's largest lake on a high-powered jet ski with uninterrupted views of Arenal Volcano's western cone." },
       es: { kicker: "05 · En el Agua · Tour de $109", title: "Bahía del Lago Arenal", desc: "Navega en jet ski por el lago más grande de Costa Rica con vistas despejadas al cono del Volcán Arenal, ideal al atardecer." }
     }
@@ -90,7 +90,7 @@
     "nav.tours": "Tours", "nav.reels": "Videos", "nav.deals": "Precios", "nav.map": "Mapa de ruta", "nav.exp": "La experiencia", "nav.faq": "Preguntas", "nav.book": "Reservar",
     "hero.kicker": "La Fortuna · Arenal · Costa Rica",
     "hero.h0": "Donde la selva<br/>se une al volcán", "hero.h1": "Atardeceres sobre<br/>el Lago Arenal", "hero.h2": "Trae a todo el grupo<br/>y llénate de barro",
-    "hero.cta": "Ver todos los tours", "hero.wa": "WhatsApp directo",
+    "hero.cta": "Ver todos los tours", "hero.vid": "Ver 4 videos reales", "hero.wa": "WhatsApp directo",
     "finder.what": "Aventura", "finder.when": "Fecha", "finder.who": "Personas", "finder.go": "Ver disponibilidad",
     "deals.kicker": "Tarifas oficiales · La Fortuna", "deals.pop": "El más popular",
     "deals.title": "Aventuras en Arenal, desde $85", "deals.sub": "Senderos al volcán, ríos de selva y el lago más grande de Costa Rica, a minutos de La Fortuna.",
@@ -183,10 +183,12 @@
     const u = UI[lang];
     $("#rail").innerHTML = TOURS.map(t => {
       const c = t[lang];
-      return `<article class="card" id="tour-${t.id}" data-cats="${t.cats.join(" ")}">
+      return `<article class="card" id="tour-${t.id}" data-tour="${t.id}" data-cats="${t.cats.join(" ")}">
         <div class="card__media" data-open="${t.id}">
           <img src="${t.img}" alt="${c.name}" loading="lazy" width="600" height="450" />
+          <video class="card__vid" src="${t.video}" muted loop playsinline preload="none"></video>
           <span class="badge">${c.tag}</span>
+          <button type="button" class="card__vbtn" data-reel="${t.reelIdx}">▶ Video</button>
           <button type="button" class="card__fav ${favs.has(t.id) ? "is-on" : ""}" data-fav="${t.id}" aria-label="${u.fav}" aria-pressed="${favs.has(t.id)}">
             <svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.5-9.3C1.1 8.4 3.2 4.5 7 4.5c2.1 0 3.7 1.2 5 3 1.3-1.8 2.9-3 5-3 3.8 0 5.9 3.9 4.5 7.2C19.5 16.4 12 21 12 21Z"/></svg>
           </button>
@@ -492,6 +494,7 @@
   $("#lbNext")?.addEventListener("click", () => showLb(lbIdx + 1, true));
 
   document.addEventListener("click", e => {
+    if (e.target.closest("[data-reel]")) return;
     const fav = e.target.closest("[data-fav]");
     if (fav) {
       e.stopPropagation();
@@ -711,6 +714,18 @@
     vidIO.observe(v);
     const bar = v.parentElement.querySelector(".reel__bar i");
     if (bar) v.addEventListener("timeupdate", () => { if (v.duration) bar.style.setProperty("--p", (v.currentTime / v.duration).toFixed(3)); });
+  });
+  rail.addEventListener("pointerover", e => {
+    const c = e.target.closest(".card");
+    if (!c || reduce) return;
+    const v = c.querySelector(".card__vid");
+    if (v && v.paused) { v.preload = "auto"; v.play().catch(() => {}); c.classList.add("is-playing"); }
+  });
+  rail.addEventListener("pointerout", e => {
+    const c = e.target.closest(".card");
+    if (!c || c.contains(e.relatedTarget)) return;
+    const v = c.querySelector(".card__vid");
+    if (v) { v.pause(); c.classList.remove("is-playing"); }
   });
 
   // Fullscreen player with sound, prev/next, keyboard
