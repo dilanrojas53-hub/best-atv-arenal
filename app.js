@@ -13,7 +13,7 @@
   /* ---------- Tours: single source of truth ---------- */
   const TOURS = [
     {
-      id: "discovery", price: 99, unit: "person", cats: ["land"], img: "assets/img/discovery.jpg",
+      id: "discovery", price: 99, unit: "person", cats: ["land"], img: "assets/img/hd/01-atv-volcano-mirador.jpg",
       en: { name: "The Discovery Adventure", tag: "Signature", meta: "ATV · Base of Arenal Volcano", chip: "Only route to the volcano base",
         desc: "Our signature ride and the only ATV route that reaches the base of Arenal Volcano. Wide-open viewpoints, jungle tracks and plenty of mud.",
         high: ["Panoramic viewpoints at the foot of the volcano", "Jungle and pasture trails", "Photo stops with the volcano behind you"] },
@@ -22,7 +22,7 @@
         high: ["Miradores panorámicos al pie del volcán", "Senderos de selva y potreros", "Paradas para fotos con el volcán de fondo"] }
     },
     {
-      id: "jetski", price: 109, unit: "person", cats: ["water"], img: "assets/img/jetski.jpg",
+      id: "jetski", price: 109, unit: "person", cats: ["water"], img: "assets/img/hd/03-jetski-action-lake.jpg",
       en: { name: "Arenal Lake Jet Ski", tag: "On the water", meta: "Jet ski · Lake Arenal", chip: "Sunset rides available",
         desc: "Fly across Costa Rica's largest and deepest lake with the volcano on the horizon. Time it right and you'll ride into a sunset you won't forget.",
         high: ["Costa Rica's biggest lake", "Volcano views from the water", "Golden-hour departures"] },
@@ -72,12 +72,12 @@
       es: { kicker: "03 · Parada Cultural · Tour de $85", title: "Territorio Indígena Maleku", desc: "En la ruta Selva y Maleku visitamos a la comunidad Maleku para conocer de primera mano su lengua ancestral, arte y tradiciones." }
     },
     {
-      tour: "discovery", img: "assets/img/discovery.jpg",
+      tour: "discovery", img: "assets/img/hd/02-atv-outback-volcano.jpg",
       en: { kicker: "04 · Exclusive Viewpoint · $99 / $300", title: "Base of Arenal Volcano", desc: "Reach our private viewpoint at the foot of Arenal Volcano — the only ATV route in La Fortuna that gets you this close to the colossus." },
       es: { kicker: "04 · Mirador Exclusivo · $99 / $300", title: "Base del Volcán Arenal", desc: "Llega a nuestro mirador privado al pie del Volcán Arenal: la única ruta en cuadra de La Fortuna que se acerca tanto al coloso." }
     },
     {
-      tour: "jetski", img: "assets/img/jetski.jpg",
+      tour: "jetski", img: "assets/img/hd/05-jetski-arenal-volcano.jpg",
       en: { kicker: "05 · On the Water · $109 Tour", title: "Lake Arenal Sunset Bay", desc: "Launch onto Costa Rica's largest lake on a high-powered jet ski with uninterrupted views of Arenal Volcano's western cone." },
       es: { kicker: "05 · En el Agua · Tour de $109", title: "Bahía del Lago Arenal", desc: "Navega en jet ski por el lago más grande de Costa Rica con vistas despejadas al cono del Volcán Arenal, ideal al atardecer." }
     }
@@ -87,7 +87,7 @@
   const ES = {
     "skip": "Saltar al contenido",
     "util.help": "Ayuda y preguntas", "util.group": "Organizar un grupo",
-    "nav.tours": "Tours", "nav.deals": "Precios", "nav.map": "Mapa de ruta", "nav.exp": "La experiencia", "nav.faq": "Preguntas", "nav.book": "Reservar",
+    "nav.tours": "Tours", "nav.reels": "Videos", "nav.deals": "Precios", "nav.map": "Mapa de ruta", "nav.exp": "La experiencia", "nav.faq": "Preguntas", "nav.book": "Reservar",
     "hero.kicker": "La Fortuna · Arenal · Costa Rica",
     "hero.h0": "Donde la selva<br/>se une al volcán", "hero.h1": "Atardeceres sobre<br/>el Lago Arenal", "hero.h2": "Trae a todo el grupo<br/>y llénate de barro",
     "hero.cta": "Ver todos los tours", "hero.wa": "WhatsApp directo",
@@ -110,6 +110,13 @@
     "map.lake": "LAGO ARENAL", "map.volc": "VOLCÁN ARENAL · 1.670m",
     "map.tag0": "Base La Fortuna", "map.tag1": "Ríos y Barro", "map.tag2": "Maleku · $85", "map.tag3": "Base Volcán · $99", "map.tag4": "Jet Ski · $109",
     "map.viewTour": "Ver detalles del tour", "map.next": "Siguiente parada",
+    "reel.live": "Clientes reales · Lago Arenal",
+    "reels.kicker": "Grabado en nuestros senderos · Sin videos de stock", "reels.title": "Míralo antes de vivirlo",
+    "reels.sub": "Clientes reales, barro real, lago real. Toca cualquier video para verlo con sonido.", "reels.count": "videos desde La Fortuna",
+    "reels.t1": "Cuadra por el campo", "reels.m1": "Discovery Adventure · $99",
+    "reels.t2": "Hacia la selva", "reels.m2": "Cuadra Selva y Maleku · $85",
+    "reels.t3": "A fondo en el lago", "reels.m3": "Jet Ski Lago Arenal · $109",
+    "reels.t4": "Coladas de lava de 2010", "reels.m4": "Base del Volcán Arenal",
     "exp.cap": "Mirador al pie del Arenal · Discovery Adventure", "exp.kicker": "La experiencia",
     "exp.title": "Sin carreteras. Sin prisa. Solo tú, el motor y la selva.",
     "exp.p1": "Recorríamos estos senderos mucho antes de que fueran tours. Hoy los compartimos con viajeros que buscan más que una foto: cruces de río, barro profundo, miradores tranquilos y el rugido de un volcán vivo.",
@@ -146,10 +153,17 @@
   };
 
   const GALLERY = [
-    { src: "assets/img/discovery.jpg", en: "Viewpoint at the foot of Arenal · The Discovery Adventure ($99)", es: "Mirador al pie del Volcán Arenal · The Discovery Adventure ($99)" },
-    { src: "assets/img/mud.jpg", en: "Deep mud and rainforest trails around La Fortuna", es: "Barro profundo y senderos de bosque lluvioso en La Fortuna" },
-    { src: "assets/img/hero.jpg", en: "Guided ATV expedition toward Arenal Volcano in golden light", es: "Expedición guiada en cuadra hacia el Volcán Arenal al atardecer" },
-    { src: "assets/img/jetski.jpg", en: "Sunset ride across Lake Arenal · Arenal Lake Jet Ski ($109)", es: "Paseo al atardecer en el Lago Arenal · Jet Ski en el Lago ($109)" }
+    { src: "assets/img/hd/02-atv-outback-volcano.jpg", en: "Outback ATV facing Arenal Volcano · The Discovery Adventure ($99)", es: "Cuadra Outback frente al Volcán Arenal · The Discovery Adventure ($99)" },
+    { src: "assets/img/hd/04-jetski-emerald-cove.jpg", en: "Emerald jungle cove on Lake Arenal · Arenal Lake Jet Ski ($109)", es: "Bahía esmeralda en el Lago Arenal · Jet Ski en el Lago ($109)" },
+    { src: "assets/img/hd/05-jetski-arenal-volcano.jpg", en: "Riding Lake Arenal with the volcano behind · Jet Ski ($109)", es: "Recorriendo el Lago Arenal con el volcán de fondo · Jet Ski ($109)" },
+    { src: "assets/img/hd/01-atv-volcano-mirador.jpg", en: "Trail viewpoint over Arenal Volcano · The Discovery Adventure ($99)", es: "Mirador del sendero sobre el Volcán Arenal · The Discovery Adventure ($99)" },
+    { src: "assets/img/hd/03-jetski-action-lake.jpg", en: "Full throttle across Lake Arenal", es: "A toda velocidad por el Lago Arenal" }
+  ];
+  const REELS = [
+    { src: "assets/video/clip-1.mp4", poster: "assets/video/clip-1-poster.jpg", en: "Countryside ATV ride · Discovery Adventure ($99)", es: "Paseo en cuadra por el campo · Discovery Adventure ($99)" },
+    { src: "assets/video/clip-2.mp4", poster: "assets/video/clip-2-poster.jpg", en: "Into the rainforest · Jungle & Maleku ATV ($85)", es: "Hacia el bosque lluvioso · Cuadra Selva y Maleku ($85)" },
+    { src: "assets/video/clip-3.mp4", poster: "assets/video/clip-3-poster.jpg", en: "Full throttle on Lake Arenal · Jet Ski ($109)", es: "A toda velocidad en el Lago Arenal · Jet Ski ($109)" },
+    { src: "assets/video/clip-4.mp4", poster: "assets/video/clip-4-poster.jpg", en: "2010 lava fields · Base of Arenal Volcano", es: "Coladas de lava de 2010 · Base del Volcán Arenal" }
   ];
 
   const EN = {};
@@ -684,6 +698,58 @@
   // Hide the sticky bar + floating WhatsApp while the booking ticket is on screen (mobile)
   const bookIO = new IntersectionObserver(([en]) => document.body.classList.toggle("at-book", en.isIntersecting), { threshold: .12 });
   bookIO.observe($("#book"));
+
+  /* ---------- Iteration 8: real-footage reels ---------- */
+  // Inline reels autoplay (muted) only while on screen, with a progress bar
+  const inlineVids = $$("video[data-autoplay]");
+  const vidIO = new IntersectionObserver(es => es.forEach(en => {
+    const v = en.target;
+    if (en.isIntersecting && !reduce && vm.hidden) { v.preload = "auto"; v.play().catch(() => {}); }
+    else v.pause();
+  }), { threshold: .35 });
+  inlineVids.forEach(v => {
+    vidIO.observe(v);
+    const bar = v.parentElement.querySelector(".reel__bar i");
+    if (bar) v.addEventListener("timeupdate", () => { if (v.duration) bar.style.setProperty("--p", (v.currentTime / v.duration).toFixed(3)); });
+  });
+
+  // Fullscreen player with sound, prev/next, keyboard
+  const vm = $("#vmodal"), vmVideo = $("#vmVideo");
+  let vmIdx = 0, vmFocus = null;
+  function showReel(i) {
+    vmIdx = (i + REELS.length) % REELS.length;
+    const r = REELS[vmIdx];
+    vmVideo.poster = r.poster; vmVideo.src = r.src; vmVideo.muted = false;
+    vmVideo.style.animation = "none"; void vmVideo.offsetWidth; vmVideo.style.animation = "";
+    $("#vmCap").textContent = r[lang];
+    $("#vmCount").textContent = `${vmIdx + 1} / ${REELS.length}`;
+    vmVideo.play().catch(() => {});
+  }
+  function openReel(i, from) {
+    vmFocus = from || document.activeElement;
+    inlineVids.forEach(v => v.pause());
+    vm.hidden = false; document.body.style.overflow = "hidden";
+    showReel(i); $("#vmClose").focus();
+  }
+  function closeReel() {
+    vmVideo.pause(); vmVideo.removeAttribute("src"); vmVideo.load();
+    vm.hidden = true; document.body.style.overflow = "";
+    inlineVids.forEach(v => { const r = v.getBoundingClientRect(); if (!reduce && r.bottom > 0 && r.top < innerHeight) v.play().catch(() => {}); });
+    vmFocus?.focus?.();
+  }
+  document.addEventListener("click", e => { const b = e.target.closest("[data-reel]"); if (b) openReel(+b.dataset.reel, b); });
+  $("#vmClose").addEventListener("click", closeReel);
+  $("#vmPrev").addEventListener("click", () => showReel(vmIdx - 1));
+  $("#vmNext").addEventListener("click", () => showReel(vmIdx + 1));
+  vm.addEventListener("click", e => { if (e.target === vm) closeReel(); });
+  vmVideo.addEventListener("ended", () => showReel(vmIdx + 1));
+  addEventListener("keydown", e => {
+    if (vm.hidden) return;
+    if (e.key === "Escape") closeReel();
+    if (e.key === "ArrowRight") showReel(vmIdx + 1);
+    if (e.key === "ArrowLeft") showReel(vmIdx - 1);
+  });
+  spy.observe($("#reels"));
 
   /* ---------- Init ---------- */
   $("#year").textContent = new Date().getFullYear();

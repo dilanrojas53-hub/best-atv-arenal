@@ -2,3 +2,5 @@
 node_modules/
 tools/shots/
 best-atv-arenal-prod.zip
+
+.vercel

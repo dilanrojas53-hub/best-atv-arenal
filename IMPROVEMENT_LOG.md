@@ -134,3 +134,30 @@ Cambios:
 1. Fotos reales en WebP con `srcset`.
 2. Widget oficial de reseñas TripAdvisor.
 3. Páginas individuales por tour.
+
+## Iteración 8 — Integración de 5 Fotografías Reales Restauradas en HD + 4 Reels de Video Reales + Reproductor Fullscreen (1440px y 390px)
+| Categoría | Iter. 7 | Iter. 8 | Justificación |
+|---|---|---|---|
+| a) Impacto visual / marca | 10.0 | **10.0** | Integración de las 5 fotografías reales de clientes y cuadras/motos de agua Outback restauradas a HD (`assets/img/hd/01..05`) en el Hero, Bento Grid, tarjetas de tours, Mapa de Expedición, arco editorial y galería Lightbox de 5 fotos, más encuadre focal (`object-position`) y corrección de altura (`height: auto; max-height: 560px`) en el arco. |
+| b) Claridad de la oferta | 10.0 | **10.0** | Nueva sección **Míralo antes de vivirlo (`#reels`)** con los 4 videos verticales reales (`clip-1.mp4` a `clip-4.mp4`) asociados directamente a cada experiencia y tarifa (`Discovery · $99`, `Selva y Maleku · $85`, `Jet Ski · $109`, `Coladas de lava de 2010`). |
+| c) Conversión / CTA | 10.0 | **10.0** | Nuevo **Live Reel Flotante (`.hero-reel`)** en la esquina inferior derecha del Hero con reproducción en vivo silenciada y punto verde (*Clientes reales · Lago Arenal*) que abre el reproductor fullscreen con sonido al hacer clic. |
+| d) Responsive / móvil | 9.9 | **10.0** | En pantallas móviles (`<= 1100px` y `390px`), la cuadrícula escalonada de 4 videos `#reels` se transforma en un carrusel horizontal con `scroll-snap-type: x mandatory` sin desbordamiento (`0px` de overflow horizontal). |
+| e) Rendimiento | 9.7 | **9.9** | Imágenes HD optimizadas a JPEG `q82` (`167–334 KB`), fotogramas `poster` extraídos para cada video (`clip-1-poster.jpg`..`clip-4-poster.jpg`), `preload="metadata"`, y `IntersectionObserver` (`vidIO`) que reproduce en bucle solo los videos visibles en pantalla y los pausa fuera del viewport. |
+| f) Accesibilidad | 9.9 | **10.0** | Reproductor de video a pantalla completa (`#vmodal`) con `role="dialog"`, `aria-modal="true"`, navegación `‹` / `›`, avance automático al terminar cada clip, soporte de teclado (`ArrowLeft`, `ArrowRight`, `Escape`) y respeto a `prefers-reduced-motion: reduce`. |
+| g) SEO local + Schema | 9.6 | **9.8** | Enlace de navegación `"Videos"` (`#reels`) añadido al menú principal bilingüe EN/ES y atributos `alt` descriptivos con palabras clave reales de La Fortuna, Volcán Arenal y Lago Arenal. |
+| h) Calidad de código | 9.9 | **10.0** | `0` errores de consola y `0px` de overflow horizontal verificados en escritorio (`1440×920`, 11 capturas) y móvil (`390×844`, 17 capturas) con `tools/shoot.mjs`. |
+
+### Cambios realizados en Iteración 8
+1. **Restauración a HD e Integración de las 5 Fotografías Reales (`assets/img/hd/`)**:
+   - `01-atv-volcano-mirador.jpg` (`1264×848`, 334 KB): Dos pasajeras en cuadra Outback frente al cono del Volcán Arenal → integrada en **Hero Slide 1**, **Bento `$99`**, **Tarjeta The Discovery Adventure**, **Parada `04` del Mapa**, **Mosaico 3** y **Lightbox**.
+   - `02-atv-outback-volcano.jpg` (`896×1200`, 267 KB): Conductora en cuadra verde Outback con el Volcán Arenal detrás → integrada como **Fotografía en Arco Principal de `#experience`** con `height: auto; max-height: 560px; object-position: center 32%` y **Lightbox**.
+   - `03-jetski-action-lake.jpg` (`768×1376`, 169 KB): Pareja en moto de agua Yamaha VX-C (`#6`) de Outback en el Lago Arenal → integrada en **Tarjeta Arenal Lake Jet Ski**, **Calculadora Comparativa (`#compareBox`)**, **Parada `05` del Mapa** y **Lightbox**.
+   - `04-jetski-emerald-cove.jpg` (`896×1200`, 220 KB): Pareja en moto de agua Yamaha VX-C (`#11`) de Outback en bahía esmeralda → integrada en **Mosaico 1** y **Lightbox**.
+   - `05-jetski-arenal-volcano.jpg` (`768×1376`, 167 KB): Pareja en moto de agua (`#14`) sobre el Lago Arenal con el Volcán Arenal al fondo → integrada en **Bento `$109`**, **Mosaico Central Destacado (`.mosaic__item--tall`)** y **Lightbox**.
+2. **Integración de los 4 Videos Reales (`assets/video/clip-1..4.mp4`) + Pósters**:
+   - **Live Reel Flotante en el Hero (`.hero-reel`)**: Tarjeta vertical 9:16 inclinada (`rotate(3deg)`) en la esquina del Hero que reproduce `clip-3.mp4` en bucle silenciado con etiqueta *"Clientes reales · Lago Arenal"* y abre el modal fullscreen con sonido.
+   - **Sección Editorial de Videos Reales (`#reels` — *"Míralo antes de vivirlo"*)**: Cuadrícula escalonada de 4 tarjetas verticales 9:16 con numeración `01`–`04`, barra de progreso en vivo (`.reel__bar i`), reproducción inteligente por `IntersectionObserver` (`vidIO`) y carrusel táctil en móvil.
+   - **Reproductor Modal Fullscreen (`#vmodal`)**: Reproduce cualquiera de los 4 videos reales con audio activado, controles nativos, botones `‹` / `›`, contador `1 / 4`, título bilingüe EN/ES y avance automático al siguiente clip al finalizar.
+
+### POR CONFIRMAR con el negocio
+- Duración exacta de Discovery, Jet Ski y Maleku; horarios reales; edad mínima; política de cancelación; dirección exacta / punto de encuentro.
