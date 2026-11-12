@@ -4,18 +4,18 @@
    + Full animation suite (parallax, progress, float, pulse, lightbox)
    ========================================================= */
 :root {
-  --paper: #f6f1e7;
-  --sand: #ecdfc8;
-  --ink: #1d1f19;
-  --ink-2: #4a4c42;
-  --forest: #12372a;
-  --forest-2: #1f5a32;
-  --moss: #c9d79a;
-  --lava: #e4551f;
-  --lava-d: #c2410f;
-  --gold: #f2b632;
+  --paper: #fbf9f4;
+  --sand: #f1eadc;
+  --ink: #121c17;
+  --ink-2: #43524a;
+  --forest: #08241b;
+  --forest-2: #134b37;
+  --moss: #d8eba8;
+  --lava: #ff5a1f;
+  --lava-d: #d93e08;
+  --gold: #f5b83d;
   --white: #fff;
-  --r: 22px;
+  --r: 24px;
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
   --sans: "DM Sans", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   --ease: cubic-bezier(.22, .8, .24, 1);
@@ -660,4 +660,334 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-reel { animation: none; }
+}
+
+/* =================== ITERATION 9 · LUXURY ATMOSPHERE, COLORS & TACTILE BUTTONS =================== */
+/* 1. Multi-layered atmospheric mesh backgrounds for light & dark sections */
+.band--paper {
+  position: relative;
+  background:
+    radial-gradient(920px 540px at 94% 6%, rgba(245, 184, 61, .14), transparent 65%),
+    radial-gradient(880px 520px at 4% 92%, rgba(19, 75, 55, .09), transparent 65%),
+    linear-gradient(180deg, #fcfaf5 0%, #f4ede0 100%);
+}
+.band--sand {
+  position: relative;
+  background:
+    radial-gradient(960px 560px at 8% 12%, rgba(255, 90, 31, .09), transparent 64%),
+    radial-gradient(900px 520px at 92% 86%, rgba(19, 75, 55, .11), transparent 64%),
+    linear-gradient(180deg, #f3ebdc 0%, #e9dec8 100%);
+  border-top: 1px solid rgba(19, 75, 55, .08);
+  border-bottom: 1px solid rgba(19, 75, 55, .08);
+}
+.band--forest {
+  background:
+    radial-gradient(960px 520px at 14% 10%, rgba(28, 128, 86, .34), transparent 62%),
+    radial-gradient(820px 480px at 88% 88%, rgba(255, 90, 31, .18), transparent 62%),
+    linear-gradient(180deg, #061c14 0%, #0c3124 52%, #082319 100%);
+}
+#deals::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 56' preserveAspectRatio='none'%3E%3Cpath fill='%23fcfaf5' d='M0 56V40l160-8 140 6 190-16 120-14 40-4 40 5 130 18 170-8 160 9 150-10 140 6v38z'/%3E%3C/svg%3E");
+}
+.promise {
+  background:
+    radial-gradient(760px 320px at 20% 50%, rgba(28, 128, 86, .26), transparent 65%),
+    linear-gradient(90deg, #061d15 0%, #0c3124 50%, #061d15 100%);
+  border-top: 1px solid rgba(216, 235, 168, .14);
+  border-bottom: 1px solid rgba(216, 235, 168, .14);
+}
+.reels {
+  background:
+    radial-gradient(950px 550px at 86% 8%, rgba(245, 184, 61, .16), transparent 58%),
+    radial-gradient(860px 520px at 10% 90%, rgba(28, 128, 86, .28), transparent 60%),
+    linear-gradient(180deg, #072017 0%, #0d3326 55%, #071e16 100%);
+}
+.footer {
+  background:
+    radial-gradient(900px 440px at 82% 0%, rgba(19, 75, 55, .36), transparent 65%),
+    linear-gradient(180deg, #061812 0%, #04100c 100%);
+}
+.ticker {
+  background: linear-gradient(90deg, #061a13 0%, #0b2b20 50%, #061a13 100%);
+  border-bottom: 1px solid rgba(245, 184, 61, .18);
+}
+.ticker::before { background: linear-gradient(90deg, #061a13, transparent); }
+.ticker::after { background: linear-gradient(-90deg, #061a13, transparent); }
+
+/* 2. Tactile 3D Luxury Buttons & Interactive Controls */
+.pill {
+  padding: 14px 28px;
+  font-weight: 700;
+  letter-spacing: .015em;
+  border-radius: 999px;
+  transition: transform .32s cubic-bezier(.22, 1, .36, 1), box-shadow .32s cubic-bezier(.22, 1, .36, 1), background .28s, border-color .28s;
+}
+.pill--lava, .menu__book {
+  background: linear-gradient(135deg, #ff783d 0%, #f24f13 52%, #c63403 100%);
+  color: #fff;
+  border: 1px solid rgba(255, 210, 175, .42);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, .42),
+    0 12px 28px -6px rgba(242, 79, 19, .62),
+    0 2px 6px rgba(0, 0, 0, .2);
+}
+.pill--lava:hover, .menu__book:hover {
+  background: linear-gradient(135deg, #ff854d 0%, #ff571a 52%, #d63b06 100%);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, .55),
+    0 18px 36px -6px rgba(242, 79, 19, .82),
+    0 4px 10px rgba(0, 0, 0, .25);
+}
+.pill--video {
+  background: linear-gradient(135deg, #ff9238 0%, #eb4c10 100%);
+  color: #fff;
+  border: 1.5px solid rgba(255, 232, 175, .68);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, .45),
+    0 14px 32px -6px rgba(235, 76, 16, .65);
+}
+.pill--video:hover {
+  background: linear-gradient(135deg, #ffa04d 0%, #f55518 100%);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, .6),
+    0 20px 38px -6px rgba(235, 76, 16, .85);
+}
+.pill__play {
+  width: 24px;
+  height: 24px;
+  background: #fff;
+  color: var(--lava-d);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, .25);
+  font-size: 10.5px;
+}
+.pill--light {
+  background: linear-gradient(180deg, #ffffff 0%, #f5efe3 100%);
+  color: var(--forest);
+  border: 1px solid rgba(255, 255, 255, .95);
+  box-shadow:
+    inset 0 1.5px 0 #ffffff,
+    0 14px 30px -8px rgba(0, 0, 0, .42);
+}
+.pill--light:hover {
+  background: #ffffff;
+  color: var(--lava-d);
+  box-shadow:
+    inset 0 1.5px 0 #ffffff,
+    0 18px 36px -8px rgba(0, 0, 0, .52);
+}
+.pill--glass {
+  background: linear-gradient(135deg, rgba(12, 52, 38, .76), rgba(6, 28, 20, .86));
+  border: 1.5px solid rgba(216, 235, 168, .55);
+  color: #fff;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .24),
+    0 14px 30px -8px rgba(0, 0, 0, .45);
+}
+.pill--glass:hover {
+  background: linear-gradient(135deg, rgba(18, 76, 55, .9), rgba(9, 40, 29, .94));
+  border-color: #25d366;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .35),
+    0 18px 36px -8px rgba(37, 211, 102, .42);
+}
+.pill--forest {
+  background: linear-gradient(135deg, #175940 0%, #09271c 100%);
+  color: #fff;
+  border: 1px solid rgba(216, 235, 168, .32);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .24),
+    0 14px 28px -8px rgba(8, 36, 27, .58);
+}
+.pill--forest:hover {
+  background: linear-gradient(135deg, #1e6e50 0%, #0d3627 100%);
+  border-color: var(--gold);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .35),
+    0 18px 34px -8px rgba(8, 36, 27, .72);
+}
+
+/* 3. Luxury Bento Combo Tile, Filter Chips, Tour Cards & Badges */
+.tile {
+  border: 1px solid rgba(255, 255, 255, .14);
+  box-shadow: 0 20px 42px -18px rgba(0, 0, 0, .55);
+}
+.tile--note {
+  background:
+    radial-gradient(120% 120% at 100% 0%, rgba(245, 184, 61, .32), transparent 58%),
+    linear-gradient(145deg, #154d38 0%, #072017 100%);
+  color: #fff;
+  border: 1.5px solid rgba(245, 184, 61, .48);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .2),
+    0 22px 44px -18px rgba(0, 0, 0, .6);
+}
+.tile--note .tile__tag {
+  background: linear-gradient(135deg, #f7c34c, #e09819);
+  color: #072017;
+  font-weight: 800;
+  box-shadow: 0 4px 12px rgba(245, 184, 61, .35);
+}
+.tile--note .tile__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, .12);
+  border: 1px solid rgba(245, 184, 61, .55);
+  color: var(--gold);
+  padding: 9px 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  margin-top: 4px;
+  transition: all .28s var(--ease);
+}
+.tile--note:hover .tile__cta {
+  background: var(--gold);
+  color: #072017;
+  transform: translateY(-2px);
+}
+
+.finder {
+  background: rgba(255, 255, 255, .97);
+  backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(245, 184, 61, .38);
+  box-shadow:
+    inset 0 1px 0 #ffffff,
+    0 28px 60px -16px rgba(6, 28, 20, .6);
+}
+
+.chip {
+  background: rgba(255, 255, 255, .86);
+  border: 1.5px solid rgba(19, 75, 55, .16);
+  color: var(--ink);
+  font-weight: 600;
+  padding: 10px 20px;
+  box-shadow: 0 4px 12px -4px rgba(8, 36, 27, .08);
+}
+.chip:hover {
+  background: #fff;
+  border-color: var(--forest-2);
+  box-shadow: 0 8px 18px -6px rgba(8, 36, 27, .16);
+}
+.chip.is-on {
+  background: linear-gradient(135deg, #175940 0%, #08241b 100%);
+  border-color: rgba(245, 184, 61, .55);
+  color: #fff;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .22),
+    0 10px 22px -6px rgba(8, 36, 27, .55);
+}
+
+.card {
+  background: linear-gradient(180deg, #ffffff 0%, #fdfbf7 100%);
+  border: 1px solid rgba(19, 75, 55, .1);
+  box-shadow:
+    0 2px 4px rgba(8, 36, 27, .04),
+    0 22px 44px -22px rgba(8, 36, 27, .38);
+}
+.card:hover {
+  border-color: rgba(245, 184, 61, .55);
+  box-shadow:
+    0 4px 10px rgba(8, 36, 27, .06),
+    0 32px 56px -20px rgba(8, 36, 27, .52);
+}
+.card__media .badge {
+  background: rgba(7, 31, 23, .84);
+  backdrop-filter: blur(8px);
+  color: #f8cf6a;
+  border: 1px solid rgba(248, 207, 106, .38);
+  border-radius: 999px;
+  padding: 5px 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .28);
+}
+.card__chip {
+  background: linear-gradient(135deg, #fef4d9 0%, #fbe3a8 100%);
+  color: #593800;
+  border: 1px solid rgba(245, 184, 61, .48);
+  border-radius: 999px;
+  padding: 4px 12px;
+}
+.card__actions {
+  padding-top: 14px;
+  border-top: 1px solid rgba(19, 75, 55, .09);
+}
+.card__link {
+  display: inline-flex;
+  align-items: center;
+  background: #f4eee1;
+  color: var(--forest);
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 8px 15px;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 1px solid rgba(19, 75, 55, .14);
+  transition: all .25s var(--ease);
+}
+.card__link:hover {
+  background: var(--forest);
+  color: #fff;
+  border-color: var(--forest);
+  transform: translateY(-2px);
+}
+.card__quick {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #ff7438 0%, #e6460d 100%);
+  color: #fff;
+  font-size: 13.5px;
+  font-weight: 700;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 215, 180, .38);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .36),
+    0 8px 18px -5px rgba(230, 70, 13, .55);
+  transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s;
+}
+.card__quick:hover {
+  background: linear-gradient(135deg, #ff854d 0%, #f24f13 100%);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .5),
+    0 12px 24px -5px rgba(230, 70, 13, .75);
+}
+
+/* 4. Calculator, Map & Adventure Pass Ticket Surface Polish */
+.cmp {
+  background: linear-gradient(180deg, #ffffff 0%, #fcf9f2 100%);
+  border: 1.5px solid rgba(19, 75, 55, .12);
+  box-shadow:
+    0 4px 12px rgba(8, 36, 27, .04),
+    0 26px 52px -24px rgba(8, 36, 27, .38);
+}
+.cmp__pick {
+  background: linear-gradient(135deg, #175940 0%, #09271c 100%);
+  color: #fff;
+  border: 1px solid rgba(216, 235, 168, .3);
+  padding: 7px 16px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, .22),
+    0 6px 14px -4px rgba(8, 36, 27, .45);
+}
+.cmp__pick:hover {
+  background: linear-gradient(135deg, #ff7438 0%, #e6460d 100%);
+  border-color: rgba(255, 215, 180, .45);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(230, 70, 13, .6);
+}
+.route__canvas {
+  background:
+    radial-gradient(circle at 58% 36%, #fffdf8 0%, #efe6d3 68%, #e4d7be 100%);
+  border: 1.5px solid rgba(19, 75, 55, .14);
+}
+.ticket {
+  border: 1.5px solid rgba(19, 75, 55, .12);
+}
+.ticket__head {
+  background: linear-gradient(135deg, #0b2d21 0%, #154e39 100%);
+  border-bottom: 1.5px solid rgba(245, 184, 61, .35);
 }

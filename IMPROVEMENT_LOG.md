@@ -161,3 +161,15 @@ Cambios:
 
 ### POR CONFIRMAR con el negocio
 - Duración exacta de Discovery, Jet Ski y Maleku; horarios reales; edad mínima; política de cancelación; dirección exacta / punto de encuentro.
+
+## Iteración 9 — Arquitectura de Color de Lujo, Fondos Atmosféricos Mesh y Botones Táctiles 3D (`?v=10`)
+| Categoría | Iter. 8 | Iter. 9 | Justificación |
+|---|---|---|---|
+| a) Impacto visual / marca | 10.0 | **10.0** | Sustitución de los fondos planos beige/verde por fondos atmosféricos *mesh* multicapa (Marfil Perla `#fcfaf5` con resplandores dorados/esmeralda y Bosque Obsidiana `#061c14` → `#0c3124` con halos bioluminiscentes y volcánicos), además de rediseñar el bloque *Outback Combo* con acabado verde esmeralda profundo y borde dorado. |
+| b) Claridad de la oferta | 10.0 | **10.0** | Insignias de categoría en vidrio esmerilado oscuro con tipografía dorada (`#f8cf6a`), píldoras de atributos en ámbar suave y botones diferenciados para `"Detalles"` y `"Reservar →"` en cada tarjeta de tour. |
+| c) Conversión / CTA | 10.0 | **10.0** | Botones táctiles 3D (`.pill--lava`, `.pill--video`, `.pill--light`, `.pill--glass`, `.pill--forest`, `.card__quick`, `.cmp__pick`) con degradados multicapa, bisel superior luminoso (`inset 0 1.5px 0`), sombras coloreadas y barrido de brillo al pasar el cursor. |
+| d) Responsive / móvil | 10.0 | **10.0** | Verificado sin desbordamiento horizontal (`0px`) en escritorio (`1440×920`) y móvil (`390×844`). |
+| e) Rendimiento | 9.9 | **9.9** | Toda la atmósfera luminosa y los efectos 3D de botones están implementados en CSS puro sin imágenes adicionales ni peso extra. |
+| f) Accesibilidad | 10.0 | **10.0** | Mayor relación de contraste en textos (`--ink: #121c17`), chips de filtro (`.chip.is-on`) y botones de acción en tarjetas (`.card__quick` en texto blanco sobre degradado volcánico). |
+| g) SEO local + Schema | 9.8 | **9.8** | Mantenido `@graph` JSON-LD y metadatos bilingües. |
+| h) Calidad de código | 10.0 | **10.0** | `0` errores de consola y `0px` de overflow horizontal verificados con `tools/shoot.mjs`. |

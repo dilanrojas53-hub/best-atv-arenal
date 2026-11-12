@@ -44,7 +44,7 @@
       en: { name: "Side by Side Tour", tag: "Families", meta: "3 hours · 1–6 riders per vehicle", chip: "Price per vehicle",
         desc: "Bring the whole crew. A 3-hour off-road adventure through lush rainforest in a side-by-side built for up to six riders — perfect for families.",
         high: ["3 hours of off-road trails", "Up to 6 riders in one vehicle", "Great for kids and mixed groups"] },
-      es: { name: "Tour en Side by Side", tag: "Familias", meta: "3 hours · 1–6 personas por vehículo", chip: "Precio por vehículo",
+      es: { name: "Tour en Side by Side", tag: "Familias", meta: "3 horas · 1–6 personas por vehículo", chip: "Precio por vehículo",
         desc: "Trae a todo el grupo. Una aventura todoterreno de 3 horas por el bosque lluvioso en un side by side para hasta seis personas, ideal para familias.",
         high: ["3 horas de senderos todoterreno", "Hasta 6 personas en un vehículo", "Ideal para niños y grupos mixtos"] }
     }
